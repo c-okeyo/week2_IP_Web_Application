@@ -32,7 +32,8 @@ function main() {
     var month =parseInt(prompt("Enter the month you were born")); 
     var day = parseInt(prompt("Enter the day you were born"));
     var gender= parseInt(prompt("Enter your gender"));
-    calculateNameAndDay(century,year,month,day,gender)
+    var output = calculateNameAndDay(century,year,month,day,gender)
+    alert (output);
     
 }
 
