@@ -3,10 +3,10 @@ const MALE_NAMES = ["Kwasi","Kwadwo"," Kwabena","Kwaku", "Yaw","Kofi","Kwame"];
 const  FEMALE_NAMES = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 
 var century= 19;
-var year=;
-var month =; 
-var day = ;
-var gender= ;
+var year=1991;
+var month =10; 
+var day = 3;
+var gender= m;
 
 var indexOfTheDay = ( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7
 indexOfTheDay = Math.round(indexOfTheDay);
@@ -14,12 +14,13 @@ var dayTheUserWasBorn = DAYS_OF_THE_WEEK[indexOfTheDay];
 
 var nameOfTheUser = null; 
 
-if (gender == "m"){
+if (gender == "male"){
     nameOfTheUser = MALE_NAMES[indexOfTheDay]
-} else if (gender == "f"){
+} else if (gender == "female"){
     nameOfTheUser =FEMALE_NAMES
 }else{
     alert ( "Please enter a valid gender")
 }
 
+console.log(dayTheUserWasBorn)
 console.log (nameOfTheUser)
