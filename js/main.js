@@ -33,8 +33,8 @@ function nameAndDay(century,year,month,day,gender) {
         alert ( "Please enter a valid gender")
     }
 
-    return dayTheUserWasBorn, nameOfTheUser
-    
+    var userInfo = [dayTheUserWasBorn,nameOfTheUser];
+    return userInfo;
 }
 
 nameAndDay()
