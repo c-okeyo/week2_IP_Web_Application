@@ -2,13 +2,13 @@ const DAYS_OF_THE_WEEK = ["Sunday","Monday","Tuesday", "Wednesday","Thurday", "F
 const MALE_NAMES = ["Kwasi","Kwadwo"," Kwabena","Kwaku", "Yaw","Kofi","Kwame"];
 const  FEMALE_NAMES = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 
-var year= parseInt(promt("Enter the year you were born"));
-var century= parseInt(year.toString.slice(0,2));
-var month =parseInt(promt("Enter the month you were born")); 
-var day = parseInt(promt("Enter the day you were born"));
-var gender= parseInt(promt("Enter your gender"));
+var year= parseInt(prompt("Enter the year you were born"));
+var century= parseInt(year.toString().slice(0,2));
+var month =parseInt(prompt("Enter the month you were born")); 
+var day = parseInt(prompt("Enter the day you were born"));
+var gender= parseInt(prompt("Enter your gender"));
 
-function nameAndDay(century,year,month,day,gender) {
+function calculateNameAndDay(century,year,month,day,gender) {
 
     var indexOfTheDay = ( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7
     indexOfTheDay = Math.round(indexOfTheDay);    
@@ -25,6 +25,15 @@ function nameAndDay(century,year,month,day,gender) {
     return userInfo;
 }
 
-nameAndDay()
+function main() {
+
+    var year= parseInt(prompt("Enter the year you were born"));
+    var century= parseInt(year.toString().slice(0,2));
+    var month =parseInt(prompt("Enter the month you were born")); 
+    var day = parseInt(prompt("Enter the day you were born"));
+    var gender= parseInt(prompt("Enter your gender"));
+    calculateNameAndDay(century,year,month,day,gender)
+    
+}
 
 
