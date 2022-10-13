@@ -6,21 +6,37 @@ var century= 19;
 var year=1991;
 var month =10; 
 var day = 3;
-var gender= m;
+var gender= "male";
 
-var indexOfTheDay = ( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7
-indexOfTheDay = Math.round(indexOfTheDay);
-var dayTheUserWasBorn = DAYS_OF_THE_WEEK[indexOfTheDay];
 
-var nameOfTheUser = null; 
 
-if (gender == "male"){
-    nameOfTheUser = MALE_NAMES[indexOfTheDay]
-} else if (gender == "female"){
-    nameOfTheUser =FEMALE_NAMES
-}else{
-    alert ( "Please enter a valid gender")
+function nameAndDay(century,year,month,day,gender) {
+
+    var indexOfTheDay = ( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7
+    
+    indexOfTheDay = Math.round(indexOfTheDay);
+    
+    var dayTheUserWasBorn = DAYS_OF_THE_WEEK[indexOfTheDay];
+    
+    var nameOfTheUser = null; 
+
+    if (gender == "m"){
+        
+        nameOfTheUser = MALE_NAMES[indexOfTheDay]
+        
+    } else if (gender == "f"){
+        
+        nameOfTheUser = FEMALE_NAMES[indexOfTheDay]
+        
+    }else{
+        
+        alert ( "Please enter a valid gender")
+    }
+
+    return dayTheUserWasBorn, nameOfTheUser
+    
 }
 
-console.log(dayTheUserWasBorn)
-console.log (nameOfTheUser)
+nameAndDay()
+
+
