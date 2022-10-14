@@ -37,8 +37,38 @@ function main() {
 
     var outputElement = document.getElementById("output");
     outputElement.innerHTML = "You were born on: " + output[0] + ". Your Akan name is: "+ output[1];
-    
-
 }
 
+function userInputValidator () {
+
+    switch(type){
+        case "Y":
+            if (value > 2022|| value < 1900 ){
+                alert ( "Enter a value less than the current calendar year")
+            };
+            break;
+        case "M":
+            if (value > 12|| value < 1 ){
+                alert ( "Enter a value less than the current calendar year")
+            };
+            break;
+        case "D":
+            if (value > 31|| value < 1 ){
+                alert ( "Enter a value less than the current calendar year")
+            };
+            break;
+        case "G":
+            if (value > 2022|| value <  ){
+                alert ( "Enter a value less than the current calendar year")
+            };
+            break;
+        case "Y":
+            if (value !=="f"|| value !=="f" ){
+                alert ( "Enter a value less than the current calendar year")
+            };
+            break;
+        default:
+            console.log()
+    }
+}
 
