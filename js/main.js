@@ -33,8 +33,12 @@ function main() {
     var day = parseInt(prompt("Enter the day you were born"));
     var gender= parseInt(prompt("Enter your gender"));
     var output = calculateNameAndDay(century,year,month,day,gender)
-    alert (output);
     
+
+    var outputElement = document.getElementById("output");
+    outputElement.innerHTML = "You were born on: " + output[0] + ". Your Akan name is: "+ output[1];
+    
+
 }
 
 
