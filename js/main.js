@@ -50,12 +50,12 @@ function userInputValidator (value, type){
             break;
         case "M":
             if (value > 12|| value < 1 ){
-                alert ( "Enter a value less than the current calendar year")
+                alert ( "Enter a value between 1 and 12 representing your month of birth")
             };
             break;
         case "D":
-            if (value > 7|| value < 1 ){
-                alert ( "Enter a value less than the current calendar year")
+            if (value > 31|| value < 1 ){
+                alert ( "Enter a valid day of the month")
             };
             break;
         case "G":
