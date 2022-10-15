@@ -24,7 +24,7 @@ function main() {
     var year= userInputValidator(parseInt(prompt("Enter the year you were born")),"Y");
     var month = userInputValidator(parseInt(prompt("Enter the month you were born")),"M"); 
     var day = userInputValidator(parseInt(prompt("Enter the day you were born")),"D");
-    var gender= userInputValidator(parseInt(prompt("Enter your gender")),"G");
+    var gender= userInputValidator(prompt("Enter your gender"),"G");
     var century= parseInt(year.toString().slice(0,2));
     var output = calculateNameAndDay(century,year,month,day,gender)
     var outputElement = document.getElementById("output");
