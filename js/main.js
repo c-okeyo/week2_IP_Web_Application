@@ -53,20 +53,16 @@ function userInputValidator () {
             };
             break;
         case "D":
-            if (value > 31|| value < 1 ){
+            if (value > 7|| value < 1 ){
                 alert ( "Enter a value less than the current calendar year")
             };
             break;
         case "G":
-            if (value > 2022|| value <  ){
+            if (value !=="m"|| value !=="f"){
                 alert ( "Enter a value less than the current calendar year")
             };
             break;
-        case "Y":
-            if (value !=="f"|| value !=="f" ){
-                alert ( "Enter a value less than the current calendar year")
-            };
-            break;
+            
         default:
             console.log()
     }
