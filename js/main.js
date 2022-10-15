@@ -8,22 +8,21 @@ var month =parseInt(prompt("Enter the month you were born"));
 var day = parseInt(prompt("Enter the day you were born"));
 var gender= parseInt(prompt("Enter your gender"));
 
-function calculateNameAndDay(century,year,month,day,gender) {
-
+function calculateNameAndDay(century,year,month,day,gender){
     var indexOfTheDay = ( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7
     indexOfTheDay = Math.round(indexOfTheDay);    
     var dayTheUserWasBorn = DAYS_OF_THE_WEEK[indexOfTheDay];    
     var nameOfTheUser = null; 
+
     if (gender == "m"){        
         nameOfTheUser = MALE_NAMES[indexOfTheDay]        
-    } else if (gender == "f"){        
-        nameOfTheUser = FEMALE_NAMES[indexOfTheDay]        
-    }else{        
-        alert ( "Please enter a valid gender")
-    }
+    } else{
+        nameOfTheUser = FEMALE_NAMES[indexOfTheDay]   
+    }      
     var userInfo = [dayTheUserWasBorn,nameOfTheUser];
-    return userInfo;
-}
+    return userInfo; 
+       
+} 
 
 function main() {
 
@@ -59,7 +58,7 @@ function userInputValidator (value, type){
             };
             break;
         case "G":
-            if (value !=="m"|| value !=="f"){
+            if (value.toString().toLowerCase() !=="m"|| value.toString().toLowerCase() !=="f"){
                 alert ( "Enter a value less than the current calendar year")
             };
             break;
