@@ -2,13 +2,8 @@ const DAYS_OF_THE_WEEK = ["Sunday","Monday","Tuesday", "Wednesday","Thurday", "F
 const MALE_NAMES = ["Kwasi","Kwadwo"," Kwabena","Kwaku", "Yaw","Kofi","Kwame"];
 const  FEMALE_NAMES = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 
-// var year= parseInt(prompt("Enter the year you were born"));
-// var century= parseInt(year.toString().slice(0,2));
-// var month =parseInt(prompt("Enter the month you were born")); 
-// var day = parseInt(prompt("Enter the day you were born"));
-// var gender= parseInt(prompt("Enter your gender"));
-
 function calculateNameAndDay(century,year,month,day,gender){
+
     var indexOfTheDay = ( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7
     indexOfTheDay = Math.round(indexOfTheDay);    
     var dayTheUserWasBorn = DAYS_OF_THE_WEEK[indexOfTheDay];    
@@ -30,11 +25,8 @@ function main() {
     var month = userInputValidator(parseInt(prompt("Enter the month you were born")),"M"); 
     var day = userInputValidator(parseInt(prompt("Enter the day you were born")),"D");
     var gender= userInputValidator(parseInt(prompt("Enter your gender")),"G");
-    
     var century= parseInt(year.toString().slice(0,2));
     var output = calculateNameAndDay(century,year,month,day,gender)
-    
-
     var outputElement = document.getElementById("output");
     outputElement.innerHTML = "You were born on: " + output[0] + ". Your Akan name is: "+ output[1];
 }
