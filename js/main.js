@@ -9,11 +9,13 @@ function calculateNameAndDay(century,year,month,day,gender){
     var dayTheUserWasBorn = DAYS_OF_THE_WEEK[indexOfTheDay];    
     var nameOfTheUser = null; 
 
-    if (gender == "m"){        
+    if (gender== "m"){        
         nameOfTheUser = MALE_NAMES[indexOfTheDay]        
-    } else{
-        nameOfTheUser = FEMALE_NAMES[indexOfTheDay]   
-    }      
+    } else if (gender== "f"){        
+        nameOfTheUser=FEMALE_NAMES[indexOfTheDay]        
+    }else{        
+        alert ( "Please enter a valid gender")
+    }     
     var userInfo = [dayTheUserWasBorn,nameOfTheUser];
     return userInfo; 
        
