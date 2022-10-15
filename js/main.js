@@ -34,7 +34,7 @@ function main() {
     var year= userInputValidator(parseInt(prompt("Enter the year you were born")),"Y");
     var month = userInputValidator(parseInt(prompt("Enter the month you were born")),"M"); 
     var day = userInputValidator(parseInt(prompt("Enter the day you were born")),"D");
-    var gender= userInputValidator(prompt("Enter your gender"),"G");
+    var gender= prompt("Enter your gender");
 
     var century= parseInt(year.toString().slice(0,2));
     var output = calculateNameAndDay(century,year,month,day,gender);
@@ -61,11 +61,11 @@ function userInputValidator (value, type){
                 alert ( "Enter a valid day of the month")
             };
             break;
-        case "G":
-            if (value.toString().toLowerCase() !== "m"|| value.toString().toLowerCase() !== "f"){
-                alert ( "Enter a valid gender")
-            };
-            break;
+        // case "G":
+        //     if (value.toString().toLowerCase() !== "m"|| value.toString().toLowerCase() !== "f"){
+        //         alert ( "Enter a valid gender")
+        //     };
+        //     break;
        default:
             console.log()
     }
