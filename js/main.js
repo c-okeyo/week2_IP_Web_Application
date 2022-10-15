@@ -31,16 +31,15 @@ function main() {
     var century= parseInt(year.toString().slice(0,2));
     // var output = calculateNameAndDay(century,year,month,day,gender);
     
-
     // var year= userInputValidator(parseInt(prompt("Enter the year you were born")),"Y");
     // var month = userInputValidator(parseInt(prompt("Enter the month you were born")),"M"); 
     // var day = userInputValidator(parseInt(prompt("Enter the day you were born")),"D");
     // var gender= userInputValidator(prompt("Enter your gender"),"G");
     // var century= parseInt(year.toString().slice(0,2));
- var output = calculateNameAndDay(century,year,month,day,gender);
- var outputElement = document.getElementById("output");
- alert(output);
- outputElement.innerHTML = "You were born on: " + output[0] + ". Your Akan name is: "+ output[1];
+    var output = calculateNameAndDay(century,year,month,day,gender);
+    var outputElement = document.getElementById("output");
+    console.log(outputElement);
+    outputElement.innerHTML = "You were born on " + output[0] + ", and your Akan name is "+ output[1] + "! Bring a friend next time &#128521 .";
 }
 
 // function userInputValidator (value, type){
