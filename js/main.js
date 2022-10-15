@@ -51,7 +51,7 @@ function userInputValidator (value, type){
             break;
         case "G":
             if (value.toString().toLowerCase() !=="m"|| value.toString().toLowerCase() !=="f"){
-                alert ( "Enter a value less than the current calendar year")
+                alert ( "Enter a valid gender")
             };
             break;
        default:
