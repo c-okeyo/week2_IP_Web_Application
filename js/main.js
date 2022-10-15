@@ -27,11 +27,12 @@ function calculateNameAndDay(century,year,month,day,gender) {
 
 function main() {
 
-    var year= parseInt(prompt("Enter the year you were born"));
+    var year= userInputValidator(parseInt(prompt("Enter the year you were born")),"Y");
+    var month = userInputValidator(parseInt(prompt("Enter the month you were born")),"M"); 
+    var day = userInputValidator(parseInt(prompt("Enter the day you were born")),"D");
+    var gender= userInputValidator(parseInt(prompt("Enter your gender")),"G");
+    
     var century= parseInt(year.toString().slice(0,2));
-    var month =parseInt(prompt("Enter the month you were born")); 
-    var day = parseInt(prompt("Enter the day you were born"));
-    var gender= parseInt(prompt("Enter your gender"));
     var output = calculateNameAndDay(century,year,month,day,gender)
     
 
@@ -39,7 +40,7 @@ function main() {
     outputElement.innerHTML = "You were born on: " + output[0] + ". Your Akan name is: "+ output[1];
 }
 
-function userInputValidator () {
+function userInputValidator (value, type){
 
     switch(type){
         case "Y":
@@ -62,9 +63,8 @@ function userInputValidator () {
                 alert ( "Enter a value less than the current calendar year")
             };
             break;
-            
-        default:
+       default:
             console.log()
     }
-}
+ }
 
