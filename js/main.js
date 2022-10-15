@@ -23,50 +23,51 @@ function calculateNameAndDay(century,year,month,day,gender){
 
 function main() {
 
-    var year= parseInt(prompt("Enter the year you were born"));
-    // console.log (year);
-    var month = parseInt(prompt("Enter the month you were born")); 
-    var day = parseInt(prompt("Enter the day you were born"));
-    var gender= prompt("Enter your gender");
-    var century= parseInt(year.toString().slice(0,2));
-    // var output = calculateNameAndDay(century,year,month,day,gender);
-    
-    // var year= userInputValidator(parseInt(prompt("Enter the year you were born")),"Y");
-    // var month = userInputValidator(parseInt(prompt("Enter the month you were born")),"M"); 
-    // var day = userInputValidator(parseInt(prompt("Enter the day you were born")),"D");
-    // var gender= userInputValidator(prompt("Enter your gender"),"G");
+    // var year= parseInt(prompt("Enter the year you were born"));
+    // // console.log (year);
+    // var month = parseInt(prompt("Enter the month you were born")); 
+    // var day = parseInt(prompt("Enter the day you were born"));
+    // var gender= prompt("Enter your gender");
     // var century= parseInt(year.toString().slice(0,2));
+    // // var output = calculateNameAndDay(century,year,month,day,gender);
+    
+    var year= userInputValidator(parseInt(prompt("Enter the year you were born")),"Y");
+    var month = userInputValidator(parseInt(prompt("Enter the month you were born")),"M"); 
+    var day = userInputValidator(parseInt(prompt("Enter the day you were born")),"D");
+    var gender= userInputValidator(prompt("Enter your gender"),"G");
+    
+    var century= parseInt(year.toString().slice(0,2));
     var output = calculateNameAndDay(century,year,month,day,gender);
     var outputElement = document.getElementById("output");
     console.log(outputElement);
     outputElement.innerHTML = "You were born on " + output[0] + ", and your Akan name is "+ output[1] + "! Bring a friend next time &#128521.";
 }
 
-// function userInputValidator (value, type){
+function userInputValidator (value, type){
 
-//     switch(type){
-//         case "Y":
-//             if (value > 2022|| value < 1900 ){
-//                 alert ( "Enter a value less than the current calendar year")
-//             };
-//             break;
-//         case "M":
-//             if (value > 12|| value < 1 ){
-//                 alert ( "Enter a value between 1 and 12 representing your month of birth")
-//             };
-//             break;
-//         case "D":
-//             if (value > 31|| value < 1 ){
-//                 alert ( "Enter a valid day of the month")
-//             };
-//             break;
-//         case "G":
-//             if (value.toString().toLowerCase() !=="m"|| value.toString().toLowerCase() !=="f"){
-//                 alert ( "Enter a valid gender")
-//             };
-//             break;
-//        default:
-//             console.log()
-//     }
-//  }
+    switch(type){
+        case "Y":
+            if (value > 2022|| value < 1900 ){
+                alert ( "Enter a value less than the current calendar year")
+            };
+            break;
+        case "M":
+            if (value > 12|| value < 1 ){
+                alert ( "Enter a value between 1 and 12 representing your month of birth")
+            };
+            break;
+        case "D":
+            if (value > 31|| value < 1 ){
+                alert ( "Enter a valid day of the month")
+            };
+            break;
+        case "G":
+            if (value.toString().toLowerCase() !=="m"|| value.toString().toLowerCase() !=="f"){
+                alert ( "Enter a valid gender")
+            };
+            break;
+       default:
+            console.log()
+    }
+ }
 
