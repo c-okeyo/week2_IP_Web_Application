@@ -25,7 +25,7 @@ Chris Okeyo
 
 ## Live Link
 
-[https://c-okeyo.github.io/week2_IP_Web_Application]()
+[https://c-okeyo.github.io/week2_IP_Web_Application]()/
 
 ## Technologies used
 
