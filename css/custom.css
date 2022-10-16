@@ -5,15 +5,15 @@
 body{
     background-repeat: no-repeat;
     background-size: unset;
-    background-color:wheat;
+    background-color:rgba(250, 248, 244, 0.95);
      }
 
-h1 { color: blue;
+h1 { color: rgb(11, 11, 12);
     text-transform: capitalize;
 
 }
 
 h3 {
-    color: rgb(206, 50, 99);
+    color: rgb(153, 125, 134);
     font-style: italic;
         }
