@@ -2,6 +2,18 @@
     display: block;
 }
 
-/* .ghanaian-name{
-    display: block;
-} */ 
+body{
+    background-repeat: no-repeat;
+    background-size: unset;
+    background-color:wheat;
+     }
+
+h1 { color: blue;
+    text-transform: capitalize;
+
+}
+
+h3 {
+    color: rgb(206, 50, 99);
+    font-style: italic;
+        }
