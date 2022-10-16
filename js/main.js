@@ -31,11 +31,11 @@ function main() {
     } else {
         year = yearOfBirth;
     }
-    var monthofBirth = parseInt(prompt("Enter the month you were born")); 
-    if (monthofBirth > 12 || monthofBirth < 1 ){
+    var monthOfBirth = parseInt(prompt("Enter the month you were born")); 
+    if (monthOfBirth > 12 || monthOfBirth < 1 ){
         alert ( "Enter a value between 1 and 12 representing your month of birth")
     } else {
-        month = monthofBirth;
+        month = monthOfBirth;
     }
     var dayOfBirth= parseInt(prompt("Enter the day you were born"));
     if (dayOfBirth > 31 || dayOfBirth < 1 ){
